@@ -15,6 +15,7 @@
 """
 
 """Platzigram URLs module."""
+# Django
 from django.contrib import admin
 from django.urls import path
 
@@ -22,7 +23,8 @@ from platzigram import views as local_views
 from posts import views as posts_views
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
+    #
     path("hello-world/", local_views.hello_world),
     path("sorted/", local_views.sorted),  # sorted/?numbers=10,4,50,32
     path("hi/<str:name>/<int:age>/", local_views.hi),

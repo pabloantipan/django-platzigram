@@ -21,6 +21,7 @@ from django.urls import path
 
 from platzigram import views as local_views
 from posts import views as posts_views
+from dogs import views as dogs_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -32,5 +33,9 @@ urlpatterns = [
     path(
         "posts/",
         posts_views.list_posts,
+    ),
+    path(
+        "dogs/",
+        dogs_views.list_posts,
     ),
 ]

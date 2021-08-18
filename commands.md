@@ -83,7 +83,7 @@ users
     de lógica especial para la presentación de datos.
 
     Modelo: Parte de un proyecto de Django que se encarga de estructurar
-    las tablas y propiedades de la base de datos a través de clases de Python.
+    las tablas y propiedades de la base de datos a través de clases de Python.x
 
     Vista: Parte de un proyecto de Django que se encarga de la
     lógica de negocio y es la conexión entre el template y el modelo.
@@ -101,6 +101,31 @@ u = User.objects.create_user(username='yesika', password='admin123')
 
 # Superuser
 python manage.py createsuperuser
+
+# About app design
+Separar las aplicaciones es cuestion de experiencia, pero unos tips que te puedo dar son:
+
+    Trata de no tener aplicaciones con mas de 6 modelos, si tienes mas significa que tienes una app muy grande, que hace demasiadas cosas y tiene demasiadas responsabilidades.
+
+    Trata de pensar en como separar las aplicaciones de tal modo que sean reutilizables, incluso piensa si la puedes reusar para otros proyectos.
+
+    Puedes guiarte de otros proyectos, pero cada proyecto esta hecho para resolver un problema especifico, puede que no se ajuste a lo que tu quieres construir.
+
+    Es mejor tener muchas apps pequeñas que tener una app mounstrosamente grande.
+
+Divide apps is a matter of experience. Some tips are:
+    Try apps with no more than 6 models. More than that, could mean
+    that your do too many things, it takes a lot of resposabilites,
+    so It's big
+
+    Think apps in a way you could reuse them latetly. Even, think
+    about using them in other projects
+
+    You can take other projects as a model. Think again about each 
+    app solves an specific problem. Take a too distributed model, 
+    could implies more code and not necesary solve THE problem
+
+    A lot of little apps is much better than a giant one
 
 
 
